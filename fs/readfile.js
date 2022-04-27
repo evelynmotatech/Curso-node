@@ -1,0 +1,13 @@
+//NÃO BLOQUEANTE
+const fs = require('fs');
+
+fs.readFile('texto.txt', (err, data) => {
+    if(err) throw err;
+    
+    // console.log(data.toString());
+});
+
+
+//BLOQUEANTE
+const text = fs.readFileSync('texto.txt');
+console.log(`Texto: ${text}`);
